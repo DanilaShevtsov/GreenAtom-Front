@@ -1,0 +1,12 @@
+title - {{ product.title }}
+<button
+    class="border py-2 px-4 rounded bg-yellow-400"
+    (click)="details = details ? false : true"
+>
+    {{ details ? 'Hide' : 'Show' }} Details
+</button>
+
+<div *ngIf="details">
+    <p>{{ product.description }}</p>
+    <p>Rate: {{ product.rating.rate }}</p>
+</div><br>

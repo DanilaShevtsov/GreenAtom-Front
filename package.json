@@ -18,6 +18,10 @@
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
+<<<<<<< HEAD
+    "axios": "^1.2.0",
+=======
+>>>>>>> 3fab1abc3ed425d68f4bf342da0561674ec4c44c
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
