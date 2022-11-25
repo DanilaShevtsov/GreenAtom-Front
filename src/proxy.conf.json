@@ -1,0 +1,8 @@
+{
+    "/api/*": {
+    "target": "https://4548-95-174-102-182.eu.ngrok.io/api/v1/user/set-contact-info",
+    "secure": false,
+    "changeOrigin": true,
+    "loglevel": "debug"
+    }
+}
