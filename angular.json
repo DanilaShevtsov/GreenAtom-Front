@@ -62,13 +62,10 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-<<<<<<< HEAD
           "options": {
             "browserTarget": "greenatom:build",
             "proxyConfig": "src/proxy.conf.json"
           },
-=======
->>>>>>> 3fab1abc3ed425d68f4bf342da0561674ec4c44c
           "configurations": {
             "production": {
               "browserTarget": "greenatom:build:production"
