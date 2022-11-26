@@ -16,30 +16,50 @@ img{vertical-align:top;}
 h1,h2,h3,h4,h5,h6,h7,h8{font-size:inherit;font-weight:inherit;}
 /*--------------------*/
 
-:root {
-    --darkGray: #E5E5E5;
-    --commonGray: #F6F6F6;
-    --white: #FFFFFF;
-}
-.class{
-height: 100%;
-width: 100%;
+
+/*MEDIA
+==================*/
+@media screen and (min-width:1200px) {
+  b{
+    font-size: 80px;
+    background-color: red;}
+  .content_block_gorod{
+     font-size: 70px}
+    .content_block_opross_text{
+        font-size: 20px;
+    }
+    .content_block{
+
+    }
+
+    .content_block{
+       height: 100%;
+       width: 90%; 
+    }
+
+    .img_header_logo{
+       width: 700px;
+       height: 100%;
+    }
 }
 
-.container{
-    max-width: var(--header);
-    
+/*ROOT
+==================*/ 
+:root {
+    --darkBlue: #003274;
+    --blue: #025EA1 ;
+    --white: #D3D3D3;
+    --yeloy: #B2C541;
+    --grin: #6FB22F;
+    --darkgrin: #288909;
 }
 
 /*ШАПКА
 ==================*/
-.wrapper {
-    flex: 1 0 auto;
-}
 
-.headerWrapper {
-    align-items: center;
-    padding: 19px 160px;
+.class{
+    width: 100%;
+    background-color: white;
 }
 
 .header{  
@@ -48,31 +68,85 @@ width: 100%;
     border-color: #B5B5B5;
 }
 
-.header_row{
-    text-align: center;
+.wrapper {
+    flex: 1 0 auto;
+    align-items: center;
 }
 
-.img_header_logo{
+.headerWrapper {
+    align-items: center;
+    padding: 20px 0;
+}
+
+/*CONTENT СТИЛИ
+==================*/
+h1{
+    font-size: 24px;
+    color: #003274;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+b{
+    color: #003274;
+    text-align: center;
+    text-transform: bold;
+}
+
+/*CONTENT
+==================*/
+.content{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 0 0;
+}
+
+.content_block{
+    background-color: #D3D3D3;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 20px;
+}
 
+.content_block_name{
+    padding: 10px 10px 10px 10px;
+}
+
+.content_block_gorod{
+    color: black;  
+    padding: 30px 30px 30px 30px
 }
 
 .app_project{
-    height: 100%;
+    heigh: 100%;
 }
 
-.app_project_project{
-    
-    padding: 0 0 20px 0;
+.content_block_info{
+   
 }
-.splitter{
+
+.content_block_opross_opross{
+    padding: 0px 0 20px 0;
+}
+
+.content_block_opross{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    background-color: #025EA1;
+    padding: 20px 20px;
+    width: 50%;
+}
+
+.content_block_opross_text{
+    color: white;
     display: flex;
     justify-content: center;
-    height: 100%;
 }
+
+
 /*FOOTER
-==================*/
+==================*
 .footer {
     display: flex;
     justify-content: center;
@@ -87,3 +161,4 @@ width: 100%;
     color: #003274;
 }
 
+*/
