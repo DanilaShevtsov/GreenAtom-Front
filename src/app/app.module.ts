@@ -7,20 +7,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { ProductComponent } from './components/product/product.component';
-import { ProductsService } from './services/products.service';
-import { CreateProductComponent } from './components/create-product/create-product.component';
+import { ContactInfoService } from './services/contact-info.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProjectComponent } from './components/project/project.component';
 import { ProjectService } from './services/projects.service';
+import { VacancyComponent } from './pages/vacancy/vacancy.component';
+import { VacanciesComponent } from './pages/vacancies/vacancies.component';
+import { ContactInfoComponent } from './components/contact-info/contact-info.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent,
-    CreateProductComponent,
     ProjectComponent,
+    VacancyComponent,
+    VacanciesComponent,
+    ContactInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,7 @@ import { ProjectService } from './services/projects.service';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [ProductsService, ProjectService],
+  providers: [ContactInfoService, ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

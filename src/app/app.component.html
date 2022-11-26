@@ -1,55 +1,22 @@
-<!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="app.component.css"> 
+<div class="class">
+  <header class="header">
+    <div class="wrapper">
+      <div class="container">
+          <div class="headerWrapper">
+                <img class="img_header_logo" src="app/jpg/logoGreenColor.png">  
+            </div>
+        </div>   
+      </div>    
+  </header>
+  <div class="wrapper">
+    <router-outlet>
+    </router-outlet>
+  <div class="splitter">
+  </div>
+      <div class="footer">
+        <p class="footer__text">© 2022 DEVOPSINA</p>  
+      </div> 
+  </div>
+</div>
 
-        <title>IT стажировки Росатома</title>
-    </head>
-
-    <body>
-      <div class="wrapper">
-        <header class="header">
-          <div class="container">
-              <div class="header_row">
-                    <img class="img_header_logo" src="app/jpg/logoGreenColor.png">  
-                </div>
-            </div>      
-        </header>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        <app-project *ngFor="let project of projects" [project]="project"></app-project>
-
-
-        <footer class="footer">
-            <p class="footer__text">© 2022 DEVOPSINA</p>
-
-        </footer>
-      </div>  
-    </body>
-
-</html>
+<div class="stule">gggggggggggggggggggggggggg</div>

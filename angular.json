@@ -21,11 +21,11 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/app/jpg/logoGreenColor.png",
-              "src/app/app.component.css"
+              "src/app/jpg/logoGreenColor.png"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/app/app.component.css"
             ],
             "scripts": []
           },
@@ -94,16 +94,19 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/app/jpg/logoGreenColor.png",
-              "src/app/app.component.css"
+              "src/app/jpg/logoGreenColor.png"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/app/app.component.css"
             ],
             "scripts": []
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "9c5e485a-d10f-478f-b194-61b428523c82"
   }
 }
