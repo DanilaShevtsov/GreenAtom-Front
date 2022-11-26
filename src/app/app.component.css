@@ -21,9 +21,14 @@ h1,h2,h3,h4,h5,h6,h7,h8{font-size:inherit;font-weight:inherit;}
     --commonGray: #F6F6F6;
     --white: #FFFFFF;
 }
+.class{
+height: 100%;
+width: 100%;
+}
 
 .container{
-    max-width: var(--container);
+    max-width: var(--header);
+    
 }
 
 /*ШАПКА
@@ -33,14 +38,11 @@ h1,h2,h3,h4,h5,h6,h7,h8{font-size:inherit;font-weight:inherit;}
 }
 
 .headerWrapper {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 19px 160px;
 }
 
-.header{
-    width: 100%;
+.header{  
     border-width: 0 0 1.5px 0;
     border-style: solid;
     border-color: #B5B5B5;
@@ -53,19 +55,27 @@ h1,h2,h3,h4,h5,h6,h7,h8{font-size:inherit;font-weight:inherit;}
 .img_header_logo{
     margin-left: auto;
     margin-right: auto;
+
 }
 
 .app_project{
-    justify-content: center;
     height: 100%;
 }
 
+.app_project_project{
+    
+    padding: 0 0 20px 0;
+}
+.splitter{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
 /*FOOTER
 ==================*/
 .footer {
- 
+    display: flex;
     justify-content: center;
-    margin-bottom: 0;
     padding: 30px 0;
     border-width: 1.5px 0 0 0;
     border-style: solid;
@@ -73,7 +83,7 @@ h1,h2,h3,h4,h5,h6,h7,h8{font-size:inherit;font-weight:inherit;}
 }
 
 .footer__text {
-	max-block-size: 20px;
+	text-align: center;
     color: #003274;
 }
 
