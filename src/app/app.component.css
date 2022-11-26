@@ -40,7 +40,7 @@ h1,h2,h3,h4,h5,h6,h7,h8{font-size:inherit;font-weight:inherit;}
 
 /*MEDIA
 ==================*/
-@media screen and (min-width:1200px) {
+@media screen and (min-width:2100px) {
   b{
     font-size: 80px;
     background-color: red;}
