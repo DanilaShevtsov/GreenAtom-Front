@@ -3,7 +3,7 @@ import { HttpClient, HttpParams } from "@angular/common/http";
 import { IProduct } from "../models/products";
 import { Observable } from "rxjs";
 import { IContactInfo } from "../models/contactInfo";
-const axios = require('axios').default;
+import { environment } from "src/environments/environment";
 
 @Injectable()
 export class ProductsService {
@@ -15,7 +15,7 @@ export class ProductsService {
   }
 
   setContactInfo(contactInfo: IContactInfo): Observable<IContactInfo>{
-    const url = "http://10.131.56.194:3000/api/v1/user/set-contact-info"
+    const url = environment.backUrl + "/user/set-contact-info"
     console.log(contactInfo);
 
     const body = {
