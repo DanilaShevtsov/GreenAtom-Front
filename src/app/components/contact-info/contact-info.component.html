@@ -1,4 +1,5 @@
-<form *ngIf="contactInput"
+<div class="content">
+    <form *ngIf="contactInput"
     [formGroup]="contactInfo"
     (ngSubmit)="sendContactInfo()"
 >
@@ -77,5 +78,7 @@
     </form>
 
 </div>
+</div>
+
 
 <br><br><b><a *ngIf="thankYou">Спасибо, ваш ответ получен</a></b><br><br>
