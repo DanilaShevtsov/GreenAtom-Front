@@ -14,6 +14,7 @@ export class ContactInfoComponent implements OnInit {
   contactInput = true;
   thankYou = false;
   userId:string;
+  vacancyId:string;
 
   contactInfo = new FormGroup({
     fio: new FormControl<string>(''),
@@ -30,6 +31,9 @@ export class ContactInfoComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+    this.vacancyId = this.route.snapshot.params['id'];
+
+    this.quizService.setStatistic(this.vacancyId, 'url').subscribe();
   }
   
   sendContactInfo() {
@@ -51,17 +55,19 @@ export class ContactInfoComponent implements OnInit {
 
   swapToQuiz() {
     this.contactInput = false;
-    const id = this.route.snapshot.params['id'];
-    this.quizService.getAll(id).subscribe(questions => {
+
+    this.quizService.getAll(this.vacancyId).subscribe(questions => {
       this.quizQuestions = questions;
-    })
+    });
+
+    this.quizService.setStatistic(this.vacancyId, 'readDescription').subscribe();
   }
 
   confirmQuiz(quizForm: any) {
     const questionIds = Object.keys(quizForm.form.value);
     const body = {
       "userId": this.userId,
-      "vacancyId":  this.route.snapshot.params['id'],
+      "vacancyId":  this.vacancyId,
       "data": [
           {
               "questionId": questionIds[0],
@@ -90,6 +96,8 @@ export class ContactInfoComponent implements OnInit {
     }
     this.quizService.sendAnswer(body).subscribe();
     this.thankYou = true;
+    
+    this.quizService.setStatistic(this.vacancyId, 'quiz').subscribe();
   }
 
 }

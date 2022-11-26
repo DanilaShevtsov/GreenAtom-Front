@@ -26,4 +26,15 @@ export class QuizService {
     const resp = this.http.post<IAnswer>(url, body);
     return resp;
   }
+
+  setStatistic(vacancyId:string, type:string) {
+    const url = environment.backUrl + "/statistic/update";
+    const resp = this.http.get(url, {
+      params: {
+        vacancyId: vacancyId,
+        type: type
+      }
+    });
+    return resp;
+  }
 }
