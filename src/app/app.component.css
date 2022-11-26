@@ -16,6 +16,21 @@ img{vertical-align:top;}
 h1,h2,h3,h4,h5,h6,h7,h8{font-size:inherit;font-weight:inherit;}
 /*--------------------*/
 
+/*FONT-FACE
+==================*/
+@font-face{
+    font-family: 'GolosTextBold'; 
+    src: url('./style/bold/golos-text_bold.ttf') format('ttf'), /* IE6-IE8 */ 
+         url('./style/bold/golos-text_bold.woff2') format('woff2'),                  /* Новейшие браузеры */ 
+         url('./style/bold/golos-text_bold.woff') format('woff'),                    /* Новые браузеры и IE9+ */ 
+         url('./style/bold/Golos-Text_Bold.css')  format('css');                /* Старые Safari, Android, iOS */ 
+    font-weight: bold; 
+    font-style: normal; 
+}
+
+.stule{
+font-family: ;
+}
 
 /*MEDIA
 ==================*/
@@ -95,9 +110,15 @@ b{
 
 /*CONTENT
 ==================*/
+
+.app_project{
+height: 100%;
+}
+
 .content{
     display: flex;
     justify-content: center;
+ 
     padding: 20px 0 0 0;
 }
 
