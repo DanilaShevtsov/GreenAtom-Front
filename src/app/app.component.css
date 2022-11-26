@@ -4,7 +4,6 @@
 :focus,:active{outline:none;}
 a:focus,a:active{outline:none;}
 nav,footer,header,aside{display:block;}
-html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
 input,button,textarea{font-family:inherit;}
 input::-ms-clear{display:none;}
 button{cursor:pointer;}
@@ -39,7 +38,7 @@ h1,h2,h3,h4,h5,h6,h7,h8{font-size:inherit;font-weight:inherit;}
 
 
 /*MEDIA
-==================*/
+==================*
 @media screen and (min-width:1920px) {
 
     .app_project{
@@ -78,10 +77,13 @@ h1,h2,h3,h4,h5,h6,h7,h8{font-size:inherit;font-weight:inherit;}
         font-size: 40px;
     }
 }
+*/
 
 /*ROOT
 ==================*/ 
 :root {
+    --container: 1920px;
+    --blockContainer: 1130px;
     --darkBlue: #003274;
     --blue: #025EA1 ;
     --white: #D3D3D3;
@@ -89,29 +91,44 @@ h1,h2,h3,h4,h5,h6,h7,h8{font-size:inherit;font-weight:inherit;}
     --grin: #6FB22F;
     --darkgrin: #288909;
 }
+body {
+background-color: #110303;
+position: relative;
+}
 
 /*ШАПКА
 ==================*/
 
-.class{
-    width: 100%;
-    background-color: white;
+.img_header_logo{
+    PADDING: 10PX;
+    MAX-WIDTH: 5%;
 }
+
+.container {
+    max-width: var(--container);
+}
+
 
 .header{  
     border-width: 0 0 1.5px 0;
     border-style: solid;
     border-color: #B5B5B5;
+    min-width: 100%;
 }
 
 .wrapper {
-    flex: 1 0 auto;
-    align-items: center;
+    DISPLAY: FLEX;
+    JUSTIFY-CONTENT: center;
+    min-width: 100%;
+    background-color: #288909;
+
 }
 
 .headerWrapper {
-    align-items: center;
-    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #288909;
+    min-width: 100%;
 }
 
 /*CONTENT СТИЛИ
@@ -137,14 +154,17 @@ height: 100%;
 }
 
 .content{
+    min-height: 100vh;
     display: flex;
     justify-content: center;
- 
-    padding: 20px 0 0 0;
+    background-color: white;
+    padding: 10px 0 10px 0;
 }
 
 .content_block{
-    background-color: #D3D3D3;
+    background-color: #6FB22F;
+    max-width: 55%;
+    min-width: 55%;
     margin-left: auto;
     margin-right: auto;
     border-radius: 20px;
@@ -182,16 +202,14 @@ height: 100%;
     justify-content: center;
 }
 .splitter{
-    min-height: 200px;
+    height: 100%;
 }
 
-.wrapper {
-    position: relative;
+.wrapp {
     min-height: 90%;
 }
 
 .app_project{
-    position: absolute;
     justify-content: center;
 }
 
@@ -199,7 +217,7 @@ height: 100%;
 /*FOOTER
 ==================*/
 .footer {
-    position: absolute;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -209,6 +227,7 @@ height: 100%;
     border-width: 1.5px 0 0 0;
     border-style: solid;
     border-color:black ;
+    background-color: #B5B5B5;
 }
 
 .footer__text {

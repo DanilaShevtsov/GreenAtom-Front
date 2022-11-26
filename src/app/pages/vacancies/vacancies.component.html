@@ -1,3 +1,8 @@
-<div class="app_project">
+<div class="app_project" *ngIf="projects.length == 0">
     <app-project *ngFor="let project of projects" [project]="project"></app-project>
+    
   </div>
+
+  <div class="app_project" *ngIf="projects.length > 0">
+    <h1>Проекты не найдены</h1>
+ </div>

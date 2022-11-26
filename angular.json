@@ -21,7 +21,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "./jpg/logoGreenColor.svg"
+              "src/app/jpg/logo.png"
             ],
             "styles": [
               "src/styles.css",
@@ -94,7 +94,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "./jpg/logoGreenColor.svg"
+              "app/jpg/logo.png"
             ],
             "styles": [
               "src/styles.css",
