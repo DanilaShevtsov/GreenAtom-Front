@@ -82,7 +82,7 @@ h1,h2,h3,h4,h5,h6,h7,h8{font-size:inherit;font-weight:inherit;}
 /*ROOT
 ==================*/ 
 :root {
-    --container: 1920px;
+    --container: 900px;
     --blockContainer: 1130px;
     --darkBlue: #003274;
     --blue: #025EA1 ;
@@ -99,13 +99,20 @@ position: relative;
 /*ШАПКА
 ==================*/
 
+.logo_wrapper {
+    padding: 10px;
+}
+
 .img_header_logo{
-    PADDING: 10PX;
-    MAX-WIDTH: 5%;
+    max-width: 30px;
 }
 
 .container {
-    max-width: var(--container);
+    max-width: 100%;
+    min-height: 100vh;
+    padding-left: calc(50% - var(--container) / 2);
+    padding-right: calc(50% - var(--container) / 2);
+    background-color: white;
 }
 
 
@@ -137,7 +144,9 @@ h1{
     color: #003274;
     text-align: center;
     text-transform: uppercase;
-    font-family: 'GolosTextWebBold'
+    font-family: 'GolosTextWebBold';
+    font-size: 23px;
+    
 }
 
 b{
@@ -150,33 +159,34 @@ b{
 ==================*/
 
 .app_project{
-height: 100%;
+    min-height: 100vh;
+    padding: 0 0 10px 0;
+    /* background-color: white; */
 }
 
 .content{
-    min-height: 100vh;
     display: flex;
     justify-content: center;
-    background-color: white;
-    padding: 10px 0 10px 0;
+    padding: 20px 15px 0 15px;
 }
 
 .content_block{
+    width: 100%;
     background-color: #6FB22F;
-    max-width: 55%;
-    min-width: 55%;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 20px;
+
 }
 
 .content_block_name{
+    max-width: 100%;
     padding: 10px 10px 10px 10px;
 }
 
 .content_block_gorod{
-    color: black;  
-    padding: 30px 30px 30px 30px
+    color: black;
+    background-color: #B5B5B5;
+    border-radius: 20px;
+    padding: 30px 30px 30px 30px;
 }
 
 .content_block_info{
@@ -200,6 +210,7 @@ height: 100%;
     color: white;
     display: flex;
     justify-content: center;
+    font-family: 'GolosTextWebBold'
 }
 .splitter{
     height: 100%;
