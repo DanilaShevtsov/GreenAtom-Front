@@ -13,6 +13,8 @@ import { CreateProductComponent } from './components/create-product/create-produ
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProjectComponent } from './components/project/project.component';
 import { ProjectService } from './services/projects.service';
+import { VacancyComponent } from './pages/vacancy/vacancy.component';
+import { VacanciesComponent } from './pages/vacancies/vacancies.component';
 
 
 @NgModule({
@@ -21,6 +23,8 @@ import { ProjectService } from './services/projects.service';
     ProductComponent,
     CreateProductComponent,
     ProjectComponent,
+    VacancyComponent,
+    VacanciesComponent,
   ],
   imports: [
     BrowserModule,

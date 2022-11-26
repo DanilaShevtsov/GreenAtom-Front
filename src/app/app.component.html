@@ -8,13 +8,7 @@
         </div>   
       </div>    
   </header>
-
-    <div class="app_project_project">
-      <div class="app_project">
-        <app-project *ngFor="let project of projects" [project]="project"></app-project>
-      </div>
-    </div>
-    
+    <router-outlet></router-outlet>
     <div class="footer">
       <p class="footer__text">© 2022 DEVOPSINA</p>  
     </div> 

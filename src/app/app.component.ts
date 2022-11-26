@@ -1,7 +1,5 @@
 
 import { Component, OnInit } from '@angular/core';
-import { IProject } from './models/project';
-import { ProjectService } from './services/projects.service';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +7,7 @@ import { ProjectService } from './services/projects.service';
   styleUrls: ['app.component.css']
 })
 export class AppComponent implements OnInit {
-  constructor(private readonly projectService: ProjectService) {}
-
   ngOnInit(): void {
-    this.projectService.getAll().subscribe((projects) => {
-      this.projects = projects;
-    });
-   }
-  projects: IProject[] = [];
-
+    // throw new Error('Method not implemented.');
+  }
 }

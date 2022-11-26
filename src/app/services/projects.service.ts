@@ -13,4 +13,16 @@ export class ProjectService {
     console.log(resp);
     return resp;
   }
+
+  getVacancy(id:string): Observable<IProject[]> {
+    const resp = this.http.get<IProject[]>(
+      `${environment.backUrl}/vacancy/find`, {
+        params: {
+          id: id
+        }
+      }
+    );
+    console.log(resp);
+    return resp;
+  }
 }
