@@ -1,0 +1,27 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Вакансия</th>
+                <th>ФИО</th>
+                <th>E-mail</th>
+                <th>Номер телефона</th>
+                <th>Оценка</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let answer of answers; let i = index">
+          <tr>           
+            <th>{{ i }}</th>
+            <td>{{ answer.vacancy.title }}</td>
+            <td>{{ answer.user.fio }}</td>
+            <td>{{ answer.user.email }}</td>
+            <td>{{ answer.user.phone }}</td>
+            <td>{{ answer.score }}/{{ answer.scoreMax }}</td>
+          </tr>
+        </tbody>
+      </table>
+    <br>
+    <!-- <a href="http://10.131.56.194:3001/api/v1" (click)="router.navigateByUrl('/')"></a> -->
+    <!-- <button (click)="redirectQR(answer.vacancyId)">QR</button> -->
+</div>
