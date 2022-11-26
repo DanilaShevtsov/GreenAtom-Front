@@ -40,14 +40,23 @@ h1,h2,h3,h4,h5,h6,h7,h8{font-size:inherit;font-weight:inherit;}
 
 /*MEDIA
 ==================*/
-@media screen and (min-width:2100px) {
+@media screen and (min-width:1920px) {
+
+    .app_project{
+        max-width:1800px;
+    }
+
   b{
-    font-size: 80px;
+    font-size: 50px;
     background-color: red;}
+    h1{
+        font-size: 50px;
+
+        }
   .content_block_gorod{
      font-size: 70px}
     .content_block_opross_text{
-        font-size: 20px;
+        font-size: 5px;
     }
     .content_block{
 
@@ -70,58 +79,6 @@ h1,h2,h3,h4,h5,h6,h7,h8{font-size:inherit;font-weight:inherit;}
     }
 }
 
-@font-face {
-	font-family: 'GolosTextWebBold';
-	src: url('./style/bold/golos-text_bold.ttf') format('truetype'),
-		url('./style/bold/golos-text_bold.woff2') format('woff2'),
-		url('./style/bold/golos-text_bold.woff') format('woff');
-}
-@font-face {
-	font-family: 'GolosTextWebVf';
-	src: url('./style/vf/golos-text_vf.ttf') format('truetype'),
-		url('./style/vf/golos-text_regular.woff2') format('woff2'),
-		url('./style/vf/golos-text_regular.woff') format('woff');
-}
-@font-face {
-	font-family: 'GolosTextWebRegular';
-	src: url('./style/regular/golos-text_regular.ttf') format('truetype'),
-		url('./style/regular/golos-text_regular.woff2') format('woff2'),
-		url('./style/regular/golos-text_regular.woff') format('woff');
-}
-
-
-/*MEDIA
-==================*/
-@media screen and (max-width:3400px) {
-  b{
-    font-size: 80px;
-    background-color: black;}
-  .content_block_gorod{
-     font-size: 70px}
-    .content_block_opross_text{
-        font-size: 20px;
-    }
-    .content_block{
-
-    }
-
-    .content_block{
-       height: 100%;
-       width: 90%; 
-    }
-
-    .img_header_logo{
-       width: 700px;
-       height: 100%;
-    }
-    .footer{
-        height: 90px;
-    }
-    .footer__text{
-        font-size: 40px;
-    }
-
-}
 /*ROOT
 ==================*/ 
 :root {
@@ -160,10 +117,10 @@ h1,h2,h3,h4,h5,h6,h7,h8{font-size:inherit;font-weight:inherit;}
 /*CONTENT СТИЛИ
 ==================*/
 h1{
-    font-size: 24px;
     color: #003274;
     text-align: center;
     text-transform: uppercase;
+    font-family: 'GolosTextWebBold'
 }
 
 b{
@@ -202,10 +159,6 @@ height: 100%;
     padding: 30px 30px 30px 30px
 }
 
-.app_project{
-    heigh: 100%;
-}
-
 .content_block_info{
    
 }
@@ -237,6 +190,11 @@ height: 100%;
     min-height: 90%;
 }
 
+.app_project{
+    position: absolute;
+    justify-content: center;
+}
+
 
 /*FOOTER
 ==================*/
@@ -245,6 +203,7 @@ height: 100%;
     left: 0;
     bottom: 0;
     width: 100%;
+    height: 80px;
     justify-content: center;
     padding: 30px 0;
     border-width: 1.5px 0 0 0;
