@@ -11,6 +11,8 @@ import { ProductComponent } from './components/product/product.component';
 import { ProductsService } from './services/products.service';
 import { CreateProductComponent } from './components/create-product/create-product.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProjectComponent } from './components/project/project.component';
+import { ProjectService } from './services/projects.service';
 
 
 @NgModule({
@@ -18,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     ProductComponent,
     CreateProductComponent,
+    ProjectComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [ProductsService],
+  providers: [ProductsService, ProjectService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

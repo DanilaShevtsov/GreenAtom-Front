@@ -1,7 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
-import { IProduct } from './models/products';
-import { ProductsService } from './services/products.service';
+import { IProject } from './models/project';
+import { ProjectService } from './services/projects.service';
 
 @Component({
   selector: 'app-root',
@@ -10,18 +10,14 @@ import { ProductsService } from './services/products.service';
 })
 
 export class AppComponent implements OnInit {
-  constructor(private readonly productsService: ProductsService) {}
-  loading = true;
+  constructor(private readonly projectService: ProjectService) {}
 
   ngOnInit(): void {
-    this.productsService.getAll().subscribe((products) => {
-      this.products = products;
-      this.loading = false;
+    this.projectService.getAll().subscribe((projects) => {
+      this.projects = projects;
+      console.log(this.projects);
     });
-  }
-
-  title = 'greenatom';
-
-  products: IProduct[] = [];
+   }
+  projects: IProject[] = [];
 
 }
