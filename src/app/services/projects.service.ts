@@ -10,7 +10,6 @@ export class ProjectService {
 
   getAll(): Observable<IProject[]> {
     const resp = this.http.get<IProject[]>(`${environment.backUrl}/vacancy/find`);
-    console.log(resp);
     return resp;
   }
 
@@ -22,7 +21,6 @@ export class ProjectService {
         }
       }
     );
-    console.log(resp);
     return resp;
   }
 }

@@ -1,0 +1,81 @@
+<form *ngIf="contactInput"
+    [formGroup]="contactInfo"
+    (ngSubmit)="sendContactInfo()"
+>
+    <input
+        type="text"
+        placeholder="ФИО"
+        formControlName="fio"
+    >
+    
+    <input
+        type="text"
+        placeholder="E-mail"
+        formControlName="email"
+    >
+
+    <input
+        type="text"
+        placeholder="Номер телефона"
+        formControlName="phoneNumber"
+    >
+
+    <button type="submit">Продолжить</button>
+</form>
+
+<div *ngIf="!contactInput && !thankYou">
+    <form #quizForm="ngForm"
+        (submit)="confirmQuiz(quizForm)"
+    >
+        <div *ngFor="let quiz of quizQuestions">
+            <br>{{ quiz.question }}<br>
+            <label>
+                <input
+                    id="0"
+                    type="radio"
+                    [value]="quiz.answers[0]"
+                    [name]="quiz.id"
+                    ngModel
+                >
+                {{ quiz.answers[0] }}
+            </label><br>
+
+            <label>
+                <input
+                    id="1"
+                    type="radio"
+                    [value]="quiz.answers[1]"
+                    [name]="quiz.id"
+                    ngModel
+                >
+                {{ quiz.answers[1] }}
+            </label><br>
+
+            <label>
+                <input
+                    id="2"
+                    type="radio"
+                    [value]="quiz.answers[2]"
+                    [name]="quiz.id"
+                    ngModel
+                >
+                {{ quiz.answers[2] }}
+            </label><br>
+
+            <label>
+                <input
+                    id="3"
+                    type="radio"
+                    [value]="quiz.answers[3]"
+                    [name]="quiz.id"
+                    ngModel
+                >
+                {{ quiz.answers[3] }}
+            </label><br>
+        </div>
+        <button type="submit">Отправить</button>
+    </form>
+
+</div>
+
+<br><br><b><a *ngIf="thankYou">Спасибо, ваш ответ получен</a></b>5<br><br>

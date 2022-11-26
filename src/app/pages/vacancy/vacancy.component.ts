@@ -9,8 +9,7 @@ import { ProjectService } from 'src/app/services/projects.service';
   styleUrls: ['./vacancy.component.css']
 })
 export class VacancyComponent implements OnInit {
-
-  id:string = ''
+  id:string = '';
   vacancy: IProject;
 
   constructor(
