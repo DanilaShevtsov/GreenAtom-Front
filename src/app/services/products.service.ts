@@ -15,7 +15,7 @@ export class ProductsService {
   }
 
   setContactInfo(contactInfo: IContactInfo): Observable<IContactInfo>{
-    const url = "http://10.131.56.194:3002/api/v1/user/set-contact-info"
+    const url = "http://10.131.56.194:3000/api/v1/user/set-contact-info"
     console.log(contactInfo);
 
     const body = {

@@ -1,0 +1,50 @@
+/*CONTENT
+==================*/
+h1{
+    font-size: 24px;
+    color: #003274;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.content_block_opross_text{
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;;
+}
+
+.content{
+    padding: 20px 20px;
+}
+
+.content_block{
+    height: 100%;
+    width: 70%;
+    background-color: #D3D3D3;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+}
+
+.content_block_name{
+ padding: 10px 10px 10px 10px;
+}
+
+.content_block_info{
+
+    
+}
+
+.content_block_opross{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    background-color: #025EA1;
+    padding: 20px 20px;
+    width: 50%;
+}
+
+.content_block_opross_opross{
+    padding: 20px 0 20px 0;
+}
