@@ -7,11 +7,25 @@ h1{
     text-transform: uppercase;
 }
 
+b{
+    font-size: 20px;
+    color: #003274;
+    text-align: center;
+    text-transform: bold;
+}
+
+.content_block_gorod{
+    font-size: 18px;
+    color: #025EA1;
+    padding: 30px 30px 30px 30px;
+  
+}
+
 .content_block_opross_text{
     font-size: 20px;
     color: white;
     display: flex;
-    justify-content: center;;
+    justify-content: center;
 }
 
 .content{
@@ -46,5 +60,5 @@ h1{
 }
 
 .content_block_opross_opross{
-    padding: 20px 0 20px 0;
+    padding: 0px 0 20px 0;
 }

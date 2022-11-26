@@ -63,7 +63,7 @@ h1,h2,h3,h4,h5,h6,h7,h8{font-size:inherit;font-weight:inherit;}
 /*FOOTER
 ==================*/
 .footer {
-    display: flex;
+ 
     justify-content: center;
     margin-bottom: 0;
     padding: 30px 0;
