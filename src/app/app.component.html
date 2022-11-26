@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../app/app.component.css"> 
+        <link rel="stylesheet" href="app.component.css"> 
 
         <title>IT стажировки Росатома</title>
     </head>
@@ -14,7 +14,7 @@
         <header class="header">
           <div class="container">
               <div class="header_row">
-                    <img class="img_header_logo" src="./jpg/logoGreenColor.png">  
+                    <img class="img_header_logo" src="app/jpg/logoGreenColor.png">  
                 </div>
             </div>      
         </header>
@@ -42,27 +42,7 @@
 
 
         
-        <div class="wrapper">
-          <div class="main">
-            <section class="mainContainer">
-            </section>
-            <section class="blockContainer">
-                <div class="blockInfo">
-                  <div class="blockInfo__sfedu">
-
-                    <div class="blockInfo__about">
-                      <p class="blockInfo__aboutText">
-                          СТАЖИРОВКА
-                      </p>
-                    </div>
-                  </div>
-
-                        
-                </div>
-                    
-            </section>
-          </div>
-        </div>
+        <app-project *ngFor="let project of projects" [project]="project"></app-project>
 
 
         <footer class="footer">
