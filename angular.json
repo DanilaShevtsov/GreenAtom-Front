@@ -21,11 +21,11 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/app/jpg/logoGreenColor.png",
-              "src/app/app.component.css"
+              "src/app/jpg/logoGreenColor.png"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/app/app.component.css"
             ],
             "scripts": []
           },
@@ -94,11 +94,11 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/app/jpg/logoGreenColor.png",
-              "src/app/app.component.css"
+              "src/app/jpg/logoGreenColor.png"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/app/app.component.css"
             ],
             "scripts": []
           }
