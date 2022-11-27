@@ -221,7 +221,6 @@ b{
  }
 
 .onpur-1{
-    background-color: #003274;
     padding: 15px 0 10px 15px;
     margin: 10px;
     border-radius: 20px;
@@ -229,6 +228,14 @@ b{
     border-style: solid;
     border-color:black ;
 }
+
+.thank{
+text-align: center;
+font-family: 'GolosTextWebBold';
+
+}
+
+
 /*FOOTER
 ==================*/
 .footer {

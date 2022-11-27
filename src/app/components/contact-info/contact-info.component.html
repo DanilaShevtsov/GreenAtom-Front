@@ -5,148 +5,124 @@
                 <h1>
                 АНКЕТА
                 </h1>                       
-                        <form *ngIf="contactInput"
-                            [formGroup]="contactInfo"
-                            (ngSubmit)="sendContactInfo()"
-                            >
-                         <div class="content_block_gorod">
+                    <form *ngIf="contactInput"
+                        [formGroup]="contactInfo"
+                        (ngSubmit)="sendContactInfo()"
+                        >
+                        <div class="content_block_gorod">
 
-                            <div class="input-1">
-                                <div class="input_data">ФИО:
-                                <input
-                                    required
-                                    type="text"
-                                    placeholder="Ведите ваше ФИО..."
-                                    formControlName="fio"
-                                > 
-                                </div>
-                                <div class="input_data">Почта:
-                                <input
-                                    type="text"
-                                    placeholder="Введите ваш E-mail..."
-                                    formControlName="email"
-                                    required
-                                >
-                                </div>
-
-                                <div class="input_data">Номер:
-                                <input
-                                type="text"
-                                placeholder="Ведите ваш номер..."
-                                formControlName="phoneNumber"
+                        <div class="input-1">
+                            <div class="input_data">ФИО:
+                            <input
                                 required
-                                > 
-                                </div>
-                            </div> 
+                                type="text"
+                                placeholder="Ведите ваше ФИО..."
+                                formControlName="fio"
+                            > 
                             </div>
-                            <div class="content_block_opross_opross">
-                                <div class="content_block_opross">
-                                    <div class="content_block_opross_text">
-                                        <button type="submit"><a>ПРОДОЛЖИТЬ</a></button>
-                                    </div>
-                                </div>
-                            </div> 
-                         
-                      </form>   
-
-                      <div *ngIf="!contactInput && !thankYou">
-                
-                        <form #quizForm="ngForm"
-                            (submit)="confirmQuiz(quizForm)">
-                                <div class="content_block_gorod">
-                            
-                            <div *ngFor="let quiz of quizQuestions">
-                                <div class="onpur-1">
-                                <p>{{ quiz.question }}<p>
-
-                                <label>
-                                    <input
-                                        id="0"
-                                        type="radio"
-                                        [value]="quiz.answers[0]"
-                                        [name]="quiz.id"
-                                        ngModel
-                                        required
-                                    >
-                                    {{ quiz.answers[0] }}
-                                </label><br>
-                                
-                                
-                                <label>
-                                    <input
-                                        id="1"
-                                        type="radio"
-                                        [value]="quiz.answers[1]"
-                                        [name]="quiz.id"
-                                        ngModel
-                                        required
-                                    >
-                                    {{ quiz.answers[1] }}
-                                </label><br>
-                                
-                                <label>
-                                    <input
-                                        id="2"
-                                        type="radio"
-                                        [value]="quiz.answers[2]"
-                                        [name]="quiz.id"
-                                        ngModel
-                                        required
-                                    >
-                                    {{ quiz.answers[2] }}
-                                </label><br>
-        
-                                <label>
-                                    <input
-                                        id="3"
-                                        type="radio"
-                                        [value]="quiz.answers[3]"
-                                        [name]="quiz.id"
-                                        ngModel
-                                        required
-                                    >
-                                    {{ quiz.answers[3] }}
-                                </label><br>
-                                </div>
+                            <div class="input_data">Почта:
+                            <input
+                                type="text"
+                                placeholder="Введите ваш E-mail..."
+                                formControlName="email"
+                                required
+                            >
                             </div>
+
+                            <div class="input_data">Номер:
+                            <input
+                            type="text"
+                            placeholder="Ведите ваш номер..."
+                            formControlName="phoneNumber"
+                            required
+                            > 
+                            </div>
+                        </div> 
                         </div>
                         <div class="content_block_opross_opross">
                             <div class="content_block_opross">
                                 <div class="content_block_opross_text">
-                                    <button type="submit"><a>ОТПРАВИТЬ</a></button>
+                                    <button type="submit"><a>ПРОДОЛЖИТЬ</a></button>
                                 </div>
                             </div>
-                            </div>
-                            <br><br><b><a *ngIf="thankYou">Спасибо, ваш ответ получен</a></b><br><br> 
-                        </form>
-                    </div>
+                        </div> 
+                        
+                    </form>   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                      
-                      
-            </div>
+                    <div *ngIf="!contactInput && !thankYou">
             
+                    <form #quizForm="ngForm"
+                        (submit)="confirmQuiz(quizForm)">
+                            <div class="content_block_gorod">
+                        
+                        <div *ngFor="let quiz of quizQuestions">
+                            <div class="onpur-1">
+                            <p>{{ quiz.question }}<p>
 
+                            <label>
+                                <input
+                                    id="0"
+                                    type="radio"
+                                    [value]="quiz.answers[0]"
+                                    [name]="quiz.id"
+                                    ngModel
+                                    required
+                                >
+                                {{ quiz.answers[0] }}
+                            </label><br>
+                            
+                            
+                            <label>
+                                <input
+                                    id="1"
+                                    type="radio"
+                                    [value]="quiz.answers[1]"
+                                    [name]="quiz.id"
+                                    ngModel
+                                    required
+                                >
+                                {{ quiz.answers[1] }}
+                            </label><br>
+                            
+                            <label>
+                                <input
+                                    id="2"
+                                    type="radio"
+                                    [value]="quiz.answers[2]"
+                                    [name]="quiz.id"
+                                    ngModel
+                                    required
+                                >
+                                {{ quiz.answers[2] }}
+                            </label><br>
+    
+                            <label>
+                                <input
+                                    id="3"
+                                    type="radio"
+                                    [value]="quiz.answers[3]"
+                                    [name]="quiz.id"
+                                    ngModel
+                                    required
+                                >
+                                {{ quiz.answers[3] }}
+                            </label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content_block_opross_opross">
+                        <div class="content_block_opross">
+                            <div class="content_block_opross_text">
+                                <button type="submit"><a>ОТПРАВИТЬ</a></button>
+                            </div>
+                        </div>
+                        </div> 
+                    </form>
+                </div>     
+                <div class="thank">
+                    <br><br><b><a *ngIf="thankYou">Спасибо, ваш ответ получен</a></b><br><br>   
+                    </div>                 
+            </div>
         </div>    
     </div>
 </div>
