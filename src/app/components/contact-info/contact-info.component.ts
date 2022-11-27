@@ -40,6 +40,10 @@ export class ContactInfoComponent implements OnInit {
     const fio = this.contactInfo.value.fio;
     const email = this.contactInfo.value.email;
     const phone = this.contactInfo.value.phoneNumber;
+
+    if(fio === '' || email === '' || phone === '') {
+      throw new Error("All attributes are required");
+    }
     
     this.productService.setContactInfo({
       fio: fio as string,
@@ -64,6 +68,15 @@ export class ContactInfoComponent implements OnInit {
 
   confirmQuiz(quizForm: any) {
     const questionIds = Object.keys(quizForm.form.value);
+    if(
+      quizForm.form.value[questionIds[0]] === '' ||
+      quizForm.form.value[questionIds[1]] === '' ||
+      quizForm.form.value[questionIds[2]] === '' ||
+      quizForm.form.value[questionIds[3]] === '' ||
+      quizForm.form.value[questionIds[4]] === ''
+    ) {
+      throw new Error("All attributes are required");
+    }
     const body = {
       "userId": this.userId,
       "vacancyId":  this.vacancyId,
