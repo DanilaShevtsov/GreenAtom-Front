@@ -31,15 +31,77 @@
         formControlName="phoneNumber"
         required
     >
+    <div class="content_block_opross_opross">
+      <div class="content_block_opross">
+        <button class="content_block_opross_text" type="submit">Продолжить</button>
+      </div>
+    </div>
     </form>
             </div>
           </div>  
         </div>
-        <div class="content_block_opross_opross">
-          <div class="content_block_opross">
-            <button class="content_block_opross_text" type="submit">Продолжить</button>
-          </div>
-        </div>
+      </div>
+      <div *ngIf="!contactInput && !thankYou">
+          <div class="container-2">
+              <div class="content">
+          <form #quizForm="ngForm"
+              (submit)="confirmQuiz(quizForm)"
+          >
+              <div *ngFor="let quiz of quizQuestions">
+                  <br>{{ quiz.question }}<br>
+                  <label>
+                      <input
+                          id="0"
+                          type="radio"
+                          [value]="quiz.answers[0]"
+                          [name]="quiz.id"
+                          ngModel
+                          required
+                      >
+                      {{ quiz.answers[0] }}
+                  </label><br>
+      
+                  <label>
+                      <input
+                          id="1"
+                          type="radio"
+                          [value]="quiz.answers[1]"
+                          [name]="quiz.id"
+                          ngModel
+                          required
+                      >
+                      {{ quiz.answers[1] }}
+                  </label><br>
+      
+                  <label>
+                      <input
+                          id="2"
+                          type="radio"
+                          [value]="quiz.answers[2]"
+                          [name]="quiz.id"
+                          ngModel
+                          required
+                      >
+                      {{ quiz.answers[2] }}
+                  </label><br>
+      
+                  <label>
+                      <input
+                          id="3"
+                          type="radio"
+                          [value]="quiz.answers[3]"
+                          [name]="quiz.id"
+                          ngModel
+                          required
+                      >
+                      {{ quiz.answers[3] }}
+                  </label><br>
+              </div>
+              <button type="submit" >Отправить</button>
+          </form>
+      </div>
+      </div>
+      
       </div>
 </div>
 </div>
@@ -47,68 +109,6 @@
 
 
 
-<div *ngIf="!contactInput && !thankYou">
-    <div class="container-2">
-        <div class="content">
-    <form #quizForm="ngForm"
-        (submit)="confirmQuiz(quizForm)"
-    >
-        <div *ngFor="let quiz of quizQuestions">
-            <br>{{ quiz.question }}<br>
-            <label>
-                <input
-                    id="0"
-                    type="radio"
-                    [value]="quiz.answers[0]"
-                    [name]="quiz.id"
-                    ngModel
-                    required
-                >
-                {{ quiz.answers[0] }}
-            </label><br>
-
-            <label>
-                <input
-                    id="1"
-                    type="radio"
-                    [value]="quiz.answers[1]"
-                    [name]="quiz.id"
-                    ngModel
-                    required
-                >
-                {{ quiz.answers[1] }}
-            </label><br>
-
-            <label>
-                <input
-                    id="2"
-                    type="radio"
-                    [value]="quiz.answers[2]"
-                    [name]="quiz.id"
-                    ngModel
-                    required
-                >
-                {{ quiz.answers[2] }}
-            </label><br>
-
-            <label>
-                <input
-                    id="3"
-                    type="radio"
-                    [value]="quiz.answers[3]"
-                    [name]="quiz.id"
-                    ngModel
-                    required
-                >
-                {{ quiz.answers[3] }}
-            </label><br>
-        </div>
-        <button type="submit" >Отправить</button>
-    </form>
-</div>
-</div>
-
-</div>
 
 
 <br><br><b><a *ngIf="thankYou">Спасибо, ваш ответ получен</a></b><br><br>

@@ -51,10 +51,9 @@ export class ContactInfoComponent implements OnInit {
       phone: phone as string
     }).subscribe((res) => {
       this.userId = res;
-    }
-    );
+      this.swapToQuiz();
+    });
     
-    this.swapToQuiz();
   }
 
   swapToQuiz() {
