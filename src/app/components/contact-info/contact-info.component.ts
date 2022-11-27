@@ -59,8 +59,7 @@ export class ContactInfoComponent implements OnInit {
 
   swapToQuiz() {
     this.contactInput = false;
-
-    this.quizService.getAll(this.vacancyId).subscribe(questions => {
+      this.quizService.getAll(this.vacancyId).subscribe(questions => {
       this.quizQuestions = questions;
     });
 
