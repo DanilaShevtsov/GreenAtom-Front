@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  backUrl: 'https://782a-95-174-102-182.eu.ngrok.io/api/v1'
+  backUrl: 'http://10.131.56.194:3000/api/v1'
 };
 
 /*
