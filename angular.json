@@ -21,7 +21,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/app/jpg/logoGreenColor.png"
+              "src/app/jpg/logo.png"
             ],
             "styles": [
               "src/styles.css",
@@ -66,6 +66,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "greenatom:build",
+            "disableHostCheck": true,
             "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
@@ -94,7 +95,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/app/jpg/logoGreenColor.png"
+              "app/jpg/logo.png"
             ],
             "styles": [
               "src/styles.css",

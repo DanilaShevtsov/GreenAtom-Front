@@ -4,7 +4,6 @@
 :focus,:active{outline:none;}
 a:focus,a:active{outline:none;}
 nav,footer,header,aside{display:block;}
-html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
 input,button,textarea{font-family:inherit;}
 input::-ms-clear{display:none;}
 button{cursor:pointer;}
@@ -37,36 +36,11 @@ h1,h2,h3,h4,h5,h6,h7,h8{font-size:inherit;font-weight:inherit;}
 		url('./style/regular/golos-text_regular.woff') format('woff');
 }
 
-
-/*MEDIA
-==================*/
-@media screen and (min-width:1200px) {
-  b{
-    font-size: 80px;
-    background-color: red;}
-  .content_block_gorod{
-     font-size: 70px}
-    .content_block_opross_text{
-        font-size: 20px;
-    }
-    .content_block{
-
-    }
-
-    .content_block{
-       height: 100%;
-       width: 90%; 
-    }
-
-    .img_header_logo{
-       width: 700px;
-       height: 100%;
-    }
-}
-
 /*ROOT
 ==================*/ 
 :root {
+    --container: 900px;
+    --blockContainer: 1130px;
     --darkBlue: #003274;
     --blue: #025EA1 ;
     --white: #D3D3D3;
@@ -74,12 +48,34 @@ h1,h2,h3,h4,h5,h6,h7,h8{font-size:inherit;font-weight:inherit;}
     --grin: #6FB22F;
     --darkgrin: #288909;
 }
+body {
+position: relative;
+}
 
 /*ШАПКА
 ==================*/
 
-.class{
-    width: 100%;
+.logo_wrapper {
+    padding: 10px;
+}
+
+.img_header_logo{
+    max-width: 30px;
+}
+
+.container {
+    max-width: 100%;
+    min-height: 100vh;
+    padding-left: calc(50% - var(--container) / 2);
+    padding-right: calc(50% - var(--container) / 2);
+    background-color: white;
+}
+
+.container-2 {
+    max-width: 100%;
+    min-height: 85vh;
+    padding-left: calc(50% - var(--container) / 2);
+    padding-right: calc(50% - var(--container) / 2);
     background-color: white;
 }
 
@@ -87,25 +83,33 @@ h1,h2,h3,h4,h5,h6,h7,h8{font-size:inherit;font-weight:inherit;}
     border-width: 0 0 1.5px 0;
     border-style: solid;
     border-color: #B5B5B5;
+    min-width: 100%;
 }
 
 .wrapper {
-    flex: 1 0 auto;
-    align-items: center;
+    DISPLAY: FLEX;
+    JUSTIFY-CONTENT: center;
+    min-width: 100%;
+    background-color: #288909;
+
 }
 
 .headerWrapper {
-    align-items: center;
-    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    background-color: #288909;
+    min-width: 100%;
 }
 
 /*CONTENT СТИЛИ
 ==================*/
 h1{
-    font-size: 24px;
     color: #003274;
     text-align: center;
     text-transform: uppercase;
+    font-family: 'GolosTextWebBold';
+    font-size: 23px;
+    
 }
 
 b{
@@ -114,38 +118,46 @@ b{
     text-transform: bold;
 }
 
+
 /*CONTENT
 ==================*/
 
 .app_project{
-height: 100%;
+    min-height: 100vh;
+    padding: 0 0 10px 0;
+    /* background-color: white; */
 }
 
 .content{
     display: flex;
     justify-content: center;
- 
-    padding: 20px 0 0 0;
+    padding: 20px 15px 0 15px;
 }
 
 .content_block{
-    background-color: #D3D3D3;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    background-color: #6FB22F;
     border-radius: 20px;
+
 }
 
 .content_block_name{
-    padding: 10px 10px 10px 10px;
+    max-width: 100%;
+    padding: 10px;
 }
 
 .content_block_gorod{
-    color: black;  
-    padding: 30px 30px 30px 30px
+    color: black;
+    background-color: #B5B5B5;
+    border-radius: 20px;
+    padding: 30px 30px 30px 30px;
 }
 
-.app_project{
-    heigh: 100%;
+.content_block_gorod_2{
+    color: black;
+    background-color: red;
+    border-radius: 20px;
+
 }
 
 .content_block_info{
@@ -153,7 +165,7 @@ height: 100%;
 }
 
 .content_block_opross_opross{
-    padding: 0px 0 20px 0;
+    padding: 20px 0 20px 0;
 }
 
 .content_block_opross{
@@ -169,21 +181,58 @@ height: 100%;
     color: white;
     display: flex;
     justify-content: center;
+    font-family: 'GolosTextWebBold';
+    font-size: 25px;
+    text-transform: uppercase;
 }
 .splitter{
-    min-height: 200px;
+    height: 100%;
 }
 
-.wrapper {
-    position: relative;
+.wrapp {
     min-height: 90%;
 }
 
+.app_project{
+    justify-content: center;
+}
+ 
+ 
+    input[type=text] {
+        border: none;
+        border-bottom: 2px solid #003274;
+        background-color: none;
+        color: #B5B5B5;
+        font-size: 20px;
+        position: relative;
+    }
 
+.quiz.answers{
+    font-size: 60px;
+}
+
+
+ .input_data{
+    font-size: 20px;
+    font-family: 'GolosTextWebBold';
+    color: #003274;
+    text-align: center;
+    padding: 10px 0 0 0;
+ }
+
+.onpur-1{
+    background-color: #003274;
+    padding: 15px 0 10px 15px;
+    margin: 10px;
+    border-radius: 20px;
+    border-width: 1.5px;
+    border-style: solid;
+    border-color:black ;
+}
 /*FOOTER
 ==================*/
 .footer {
-    position: absolute;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -193,6 +242,7 @@ height: 100%;
     border-width: 1.5px 0 0 0;
     border-style: solid;
     border-color:black ;
+    background-color: #B5B5B5;
 }
 
 .footer__text {

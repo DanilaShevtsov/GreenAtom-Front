@@ -14,6 +14,7 @@ import { ProjectService } from './services/projects.service';
 import { VacancyComponent } from './pages/vacancy/vacancy.component';
 import { VacanciesComponent } from './pages/vacancies/vacancies.component';
 import { ContactInfoComponent } from './components/contact-info/contact-info.component';
+import { AdminComponent } from './pages/admin/admin.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ContactInfoComponent } from './components/contact-info/contact-info.com
     ProjectComponent,
     VacancyComponent,
     VacanciesComponent,
-    ContactInfoComponent
+    ContactInfoComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,13 @@ export class VacanciesComponent implements OnInit {
     this.projectService.getAll().subscribe((projects) => {
       this.projects = projects;
     });
+        
+    if (this.projects.length) {
+      console.log('Data is getted');
+    } else {
+      console.log('Data is not getted');
+
+    }
    }
   projects: IProject[] = [];
 

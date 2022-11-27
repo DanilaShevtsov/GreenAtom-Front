@@ -11,6 +11,9 @@ import { ProjectService } from 'src/app/services/projects.service';
 export class VacancyComponent implements OnInit {
   id:string = '';
   vacancy: IProject;
+  descr = true;
+  contactInfo = false;
+  quiz = false;
 
   constructor(
     private readonly route: ActivatedRoute,
@@ -25,5 +28,14 @@ export class VacancyComponent implements OnInit {
       }
     );
   }
+  
+  toContactInfo() {
+    this.descr = false;
+    this.contactInfo = true;
+  }
 
+  toQuiz() {
+    this.contactInfo = false;
+    this.quiz = true;
+  }
 }

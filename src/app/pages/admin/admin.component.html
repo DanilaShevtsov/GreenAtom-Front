@@ -1,0 +1,79 @@
+<div *ngIf="!authorized">
+  <form
+    [formGroup]="authForm"
+    (ngSubmit)="auth()"
+  >
+    <input
+      type="text"
+      placeholder="username"
+      formControlName="username"
+    >
+
+    <input
+      type="text"
+      placeholder="password"
+      formControlName="password"
+    >
+    <button type="submit">Log In</button>
+  </form>
+</div>
+
+<div *ngIf="authorized">
+    <table>
+      <thead>
+          <tr>
+              <th>ID</th>
+              <th>Вакансия</th>
+              <th>ФИО</th>
+              <th>E-mail</th>
+              <th>Номер телефона</th>
+              <th>Оценка</th>
+          </tr>
+      </thead>
+      <tbody *ngFor="let answer of answers; let i = index">
+        <tr>           
+          <th>{{ i }}</th>
+          <td>{{ answer.vacancy.title }}</td>
+          <td>{{ answer.user.fio }}</td>
+          <td>{{ answer.user.email }}</td>
+          <td>{{ answer.user.phone }}</td>
+          <td>{{ answer.score }}/{{ answer.scoreMax }}</td>
+        </tr>
+      </tbody>
+    </table>
+  <br>
+</div>
+  
+<form
+  [formGroup]="vacancyForm"
+  (ngSubmit)="createVacancy()"
+  *ngIf="authorized"
+>
+  <input
+      type="text"
+      placeholder="Название"
+      formControlName="title"
+  >
+    
+  <input
+      type="text"
+      placeholder="Краткое описание"
+      formControlName="preview"
+  >
+
+  <input
+      type="text"
+      placeholder="Полное описание"
+      formControlName="description"
+  >
+
+  <input
+      type="text"
+      placeholder="Город"
+      formControlName="city"
+  >
+
+  <button type="submit">Создать</button>
+</form>
+    <!-- <a href="http://10.131.56.194:3001/api/v1" (click)="router.navigateByUrl('/')"></a> -->
+    <!-- <button (click)="redirectQR(answer.vacancyId)">QR</button> -->
