@@ -1,4 +1,12 @@
+<div class="container-2">
 <div class="content">
+    <div class="content_block">
+        <div class="content_block_name">
+          <h1>
+            АНКЕТА
+          </h1>
+          <div class="content_block_gorod">
+            <div class="content-2">
     <form *ngIf="contactInput"
     [formGroup]="contactInfo"
     (ngSubmit)="sendContactInfo()"
@@ -20,11 +28,25 @@
         placeholder="Номер телефона"
         formControlName="phoneNumber"
     >
+    </form>
+            </div>
+          </div>  
+        </div>
+        <div class="content_block_opross_opross">
+          <div class="content_block_opross">
+            <button class="content_block_opross_text" type="submit">Продолжить</button>
+          </div>
+        </div>
+      </div>
+</div>
+</div>
 
-    <button type="submit">Продолжить</button>
-</form>
+
+
 
 <div *ngIf="!contactInput && !thankYou">
+    <div class="container-2">
+        <div class="content">
     <form #quizForm="ngForm"
         (submit)="confirmQuiz(quizForm)"
     >
@@ -74,10 +96,11 @@
                 {{ quiz.answers[3] }}
             </label><br>
         </div>
-        <button type="submit">Отправить</button>
+        <button type="submit" >Отправить</button>
     </form>
-
 </div>
+</div>
+
 </div>
 
 

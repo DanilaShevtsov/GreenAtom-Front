@@ -36,49 +36,6 @@ h1,h2,h3,h4,h5,h6,h7,h8{font-size:inherit;font-weight:inherit;}
 		url('./style/regular/golos-text_regular.woff') format('woff');
 }
 
-
-/*MEDIA
-==================*
-@media screen and (min-width:1920px) {
-
-    .app_project{
-        max-width:1800px;
-    }
-
-  b{
-    font-size: 50px;
-    background-color: red;}
-    h1{
-        font-size: 50px;
-
-        }
-  .content_block_gorod{
-     font-size: 70px}
-    .content_block_opross_text{
-        font-size: 5px;
-    }
-    .content_block{
-
-    }
-
-    .content_block{
-       height: 100%;
-       width: 90%; 
-    }
-
-    .img_header_logo{
-       width: 700px;
-       height: 100%;
-    }
-    .footer{
-        height: 90px;
-    }
-    .footer__text{
-        font-size: 40px;
-    }
-}
-*/
-
 /*ROOT
 ==================*/ 
 :root {
@@ -114,6 +71,13 @@ position: relative;
     background-color: white;
 }
 
+.container-2 {
+    max-width: 100%;
+    min-height: 85vh;
+    padding-left: calc(50% - var(--container) / 2);
+    padding-right: calc(50% - var(--container) / 2);
+    background-color: white;
+}
 
 .header{  
     border-width: 0 0 1.5px 0;
@@ -153,6 +117,7 @@ b{
     text-align: center;
     text-transform: bold;
 }
+
 
 /*CONTENT
 ==================*/
